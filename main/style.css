@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Delius");
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("https://wallpapercave.com/wp/wp3857027.jpg");
+  background-repeat: none;
+  font-family: "Delius";
+}
+
+textarea {
+  height: 500px; 
+  width: 80%;
+  overflow: auto;
+  position: absolute;
+  top: 8%;
+  left: 10%;
+  background-color: black;
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0ff, 0 0 20px #0ff, 0 0 25px #0ff, 0 0 30px #0ff, 0 0 35px #0ff;
+  color: #fff;
+  text-shadow: 0 0 15px #0ff, 0 0 20px #0ff, 0 0 25px #0ff, 0 0 30px #0ff, 0 0 35px #0ff;
+  font-family: "Delius";
+  font-size: 20px;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: absolute;
+  top: 86.5%;
+  left: 45%;
+}
+
+.main-div {
+  position: relative;
+  margin: 10px;
+  background-color: transparent;
+  box-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+  transition: box-shadow 0.5s ease-out;
+}
+
+.main-div:hover {
+  box-shadow: none;
+}
+  
+
+.main-div1:hover::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 47%;
+  height: 47%;
+  box-shadow: 0 0 17px 3px blue,0 0 4px 2px blue;
+  z-index: -1;
+  animation-name: blue-shadow;
+  animation-timing-function: ease;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  border-radius: 5px;
+}
+
+.main-div1:hover::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 47%;
+  height: 47%;
+  box-shadow: 0 0 17px 3px #0ff,0 0 4px 2px #0ff;
+  z-index: -1;
+  animation-name: cyan-shadow;
+  animation-timing-function: ease;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  border-radius: 5px;
+}
+
+h1 {
+  font-size: 20px;
+  margin: 0;
+  position: relative;
+  z-index: 3;
+  padding: 20px;
+  background-color: black;
+  color: #fff;
+  border-radius: 10px;
+}
+
+@keyframes blue-shadow {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 50%;
+    left: 0;
+  }
+  50% {
+    top: 50%;
+    left: 50%;
+  }
+  75% {
+    top: 0;
+    left: 50%;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+  
+@keyframes cyan-shadow {
+  0% {
+    right: 0;
+    bottom: 0;
+  }
+  25% {
+    right: 0;
+    bottom: 50%;
+  }
+  50% {
+    right: 50%;
+    bottom: 50%;
+  }
+  75% {
+    right: 50%;
+    bottom: 0;
+  }
+  100% {
+    right: 0;
+    bottom: 0;
+  }
+}
